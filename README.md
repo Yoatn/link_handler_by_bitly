@@ -1,4 +1,5 @@
-# main.py
+# link_handler_by_bitly
+
 Приложение взаимодействует через API с сервисом bit.ly.<br/>
 https://bitly.com - Сервис сокращения URL-адресов.<br/><br/>
 В приложении реализовано:

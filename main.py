@@ -63,9 +63,9 @@ def main():
 if __name__ == '__main__':
     main()
     parser = argparse.ArgumentParser()
-    parser.add_argument("a")
+    parser.add_argument("users_url_arg")
     args = parser.parse_args()
-    users_url = args.a
+    users_url = args.users_url_arg
     try:
         if is_bitlink(users_url):
             print(clicks_counter(users_url))

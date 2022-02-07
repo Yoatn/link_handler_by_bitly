@@ -54,14 +54,10 @@ def is_bitlink(url):
     return response.ok
 
 
-def main():
+if __name__ == '__main__':
     load_dotenv()
     global BITLY_TOKEN
     BITLY_TOKEN = os.environ['BITLY_TOKEN']
-
-
-if __name__ == '__main__':
-    main()
     parser = argparse.ArgumentParser()
     parser.add_argument("users_url_arg")
     args = parser.parse_args()
@@ -73,3 +69,4 @@ if __name__ == '__main__':
             print(shorten_link(users_url))
     except requests.exceptions.HTTPError:
         print(f'Invalid URL.')
+

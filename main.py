@@ -4,11 +4,6 @@ import re
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-
-global BITLY_TOKEN
-BITLY_TOKEN = os.environ['BITLY_TOKEN']
-
 
 def shorten_link(users_url_):
     headers = {
@@ -59,7 +54,14 @@ def is_bitlink(url):
     return response.ok
 
 
+def main():
+    load_dotenv()
+    global BITLY_TOKEN
+    BITLY_TOKEN = os.environ['BITLY_TOKEN']
+
+
 if __name__ == '__main__':
+    main()
     parser = argparse.ArgumentParser()
     parser.add_argument("a")
     args = parser.parse_args()

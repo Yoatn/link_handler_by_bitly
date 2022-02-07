@@ -54,7 +54,7 @@ def is_bitlink(url):
     return response.ok
 
 
-if __name__ == '__main__':
+def main():
     load_dotenv()
     global BITLY_TOKEN
     BITLY_TOKEN = os.environ['BITLY_TOKEN']
@@ -70,3 +70,6 @@ if __name__ == '__main__':
     except requests.exceptions.HTTPError:
         print(f'Invalid URL.')
 
+
+if __name__ == '__main__':
+    main()

@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 global BITLY_TOKEN
 BITLY_TOKEN = os.environ['BITLY_TOKEN']
 
@@ -61,7 +60,6 @@ def is_bitlink(url):
 
 
 if __name__ == '__main__':
-    # users_url = input('Введите ссылку: ')
     parser = argparse.ArgumentParser()
     parser.add_argument("a")
     args = parser.parse_args()
@@ -73,5 +71,3 @@ if __name__ == '__main__':
             print(shorten_link(users_url))
     except requests.exceptions.HTTPError:
         print(f'Invalid URL.')
-    # except SystemExit:
-    #     users_url = input('Введите ссылку: ')
